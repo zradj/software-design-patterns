@@ -6,12 +6,35 @@ public class GUIApp {
         Application app;
         GUIFactory factory;
 
+        // let's pretend we have some functionality to detect the system theme
+        String theme = "light";
+
         String osName = System.getProperty("os.name").toLowerCase();
 
         if (osName.contains("mac")) {
-            factory = new GUIFactory.MacFactory();
+            if (theme.equals("light")) {
+                factory = new GUIFactory.MacLightGUIFactory();
+            } else if (theme.equals("dark")) {
+                factory = new GUIFactory.MacDarkGUIFactory();
+            } else {
+                throw new RuntimeException("Unrecognized theme: " + theme);
+            }
         } else if (osName.contains("win")) {
-            factory = new GUIFactory.WinFactory();
+            if (theme.equals("light")) {
+                factory = new GUIFactory.WinLightGUIFactory();
+            } else if (theme.equals("dark")) {
+                factory = new GUIFactory.WinDarkGUIFactory();
+            } else {
+                throw new RuntimeException("Unrecognized theme: " + theme);
+            }
+        } else if (osName.contains("linux")) {
+            if (theme.equals("light")) {
+                factory = new GUIFactory.LinuxLightGUIFactory();
+            } else if (theme.equals("dark")) {
+                factory = new GUIFactory.LinuxDarkGUIFactory();
+            } else {
+                throw new RuntimeException("Unrecognized theme: " + theme);
+            }
         } else {
             throw new RuntimeException("Unrecognized OS: " + osName);
         }

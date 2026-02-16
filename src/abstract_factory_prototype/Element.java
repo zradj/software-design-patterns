@@ -1,40 +1,156 @@
 package abstract_factory_prototype;
 
-public class Element {
+public interface Element {
 
-    public interface Button {
-        void paint();
-    }
+    void paint();
 
-    public interface Checkbox {
-        void paint();
-    }
+    interface Button extends Element {}
 
-    public static class WinButton implements Button {
+    interface Checkbox extends Element {}
+
+    interface ProgressBar extends Element {}
+
+    class WinLightButton implements Button {
+
         @Override
         public void paint() {
-            System.out.println("Rendering a square Windows Button.");
+            System.out.println("Rendering a square light Windows Button.");
         }
     }
 
-    public static class WinCheckbox implements Checkbox {
+    class WinLightCheckbox implements Checkbox {
+
         @Override
         public void paint() {
-            System.out.println("Rendering a Windows Checkbox.");
+            System.out.println("Rendering a light Windows Checkbox.");
         }
     }
 
-    public static class MacButton implements Button {
+    class WinLightProgressBar implements ProgressBar {
+
         @Override
         public void paint() {
-            System.out.println("Rendering a round Mac Button.");
+            System.out.println("Rendering a light Windows progress bar.");
         }
     }
 
-    public static class MacCheckbox implements Checkbox {
+    class WinDarkButton implements Button {
+
         @Override
         public void paint() {
-            System.out.println("Rendering a Mac Checkbox.");
+            System.out.println("Rendering a dark square Windows Button.");
+        }
+    }
+
+    class WinDarkCheckbox implements Checkbox {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a dark Windows Checkbox.");
+        }
+    }
+
+    class WinDarkProgressBar implements ProgressBar {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a dark Windows progress bar.");
+        }
+    }
+
+    class MacLightButton implements Button {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a light round Mac Button.");
+        }
+    }
+
+    class MacLightCheckbox implements Checkbox {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a light Mac Checkbox.");
+        }
+    }
+
+    class MacLightProgressBar implements ProgressBar {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a light Mac progress bar.");
+        }
+    }
+
+    class MacDarkButton implements Button {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a dark round Mac Button.");
+        }
+    }
+
+    class MacDarkCheckbox implements Checkbox {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a dark Mac Checkbox.");
+        }
+    }
+
+    class MacDarkProgressBar implements ProgressBar {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a dark Mac progress bar.");
+        }
+    }
+
+    class LinuxLightButton implements Button {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a light Linux Button.");
+        }
+    }
+
+    class LinuxLightCheckbox implements Checkbox {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a light Linux Checkbox.");
+        }
+    }
+
+    class LinuxLightProgressBar implements ProgressBar {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a light Linux progress bar.");
+        }
+    }
+
+    class LinuxDarkButton implements Button {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a dark Linux Button.");
+        }
+    }
+
+    class LinuxDarkCheckbox implements Checkbox {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a dark Linux Checkbox.");
+        }
+    }
+
+    class LinuxDarkProgressBar implements ProgressBar {
+
+        @Override
+        public void paint() {
+            System.out.println("Rendering a dark Linux progress bar.");
         }
     }
 }
