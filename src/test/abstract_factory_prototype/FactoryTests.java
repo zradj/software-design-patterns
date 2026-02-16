@@ -12,7 +12,7 @@ class FactoryTests {
     @Test
     @DisplayName("WinDarkGUIFactory creates an instance of WinDarkButton")
     void testFactoryCreate() {
-        GUIFactory factory = new GUIFactory.WinDarkGUIFactory();
+        GUIFactory factory = GUIFactory.WinDarkGUIFactory.getInstance();
         Element.Button button = factory.createButton("button");
         assertInstanceOf(Element.WinDarkButton.class, button,
                 "The object should be an instance of WinDarkButton");

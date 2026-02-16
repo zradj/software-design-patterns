@@ -30,25 +30,25 @@ public class GUIApp {
 
             if (osName.contains("mac")) {
                 if (theme.equals("light")) {
-                    factory = new GUIFactory.MacLightGUIFactory();
+                    factory = GUIFactory.MacLightGUIFactory.getInstance();
                 } else if (theme.equals("dark")) {
-                    factory = new GUIFactory.MacDarkGUIFactory();
+                    factory = GUIFactory.MacDarkGUIFactory.getInstance();
                 } else {
                     throw new RuntimeException("Unrecognized theme: " + theme);
                 }
             } else if (osName.contains("win")) {
                 if (theme.equals("light")) {
-                    factory = new GUIFactory.WinLightGUIFactory();
+                    factory = GUIFactory.WinLightGUIFactory.getInstance();
                 } else if (theme.equals("dark")) {
-                    factory = new GUIFactory.WinDarkGUIFactory();
+                    factory = GUIFactory.WinDarkGUIFactory.getInstance();
                 } else {
                     throw new RuntimeException("Unrecognized theme: " + theme);
                 }
             } else if (osName.contains("linux")) {
                 if (theme.equals("light")) {
-                    factory = new GUIFactory.LinuxLightGUIFactory();
+                    factory = GUIFactory.LinuxLightGUIFactory.getInstance();
                 } else if (theme.equals("dark")) {
-                    factory = new GUIFactory.LinuxDarkGUIFactory();
+                    factory = GUIFactory.LinuxDarkGUIFactory.getInstance();
                 } else {
                     throw new RuntimeException("Unrecognized theme: " + theme);
                 }

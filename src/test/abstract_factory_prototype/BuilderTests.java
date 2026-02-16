@@ -21,7 +21,7 @@ class BuilderTests {
             100, 101, 1
             """)
     void testWindowBuilderNumComponents(int numButtons, int numCheckboxes, int numProgressBars) {
-        GUIFactory factory = new GUIFactory.LinuxLightGUIFactory();
+        GUIFactory factory = GUIFactory.LinuxLightGUIFactory.getInstance();
         WindowBuilder builder = new WindowBuilder(factory);
 
         for (int i = 1; i <= numButtons; i++) {
