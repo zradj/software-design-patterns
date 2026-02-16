@@ -2,15 +2,17 @@ package abstract_factory_prototype;
 
 import abstract_factory_prototype.Element.*;
 
+import java.util.List;
+
 public class Window implements Element {
 
-    private String title;
-    private Button[] buttons;
-    private Checkbox[] checkboxes;
-    private ProgressBar[] progressBars;
+    private final String title;
+    private final List<Button> buttons;
+    private final List<Checkbox> checkboxes;
+    private final List<ProgressBar> progressBars;
 
-    public Window(String title, Button[] buttons,
-                  Checkbox[] checkboxes, ProgressBar[] progressBars) {
+    public Window(String title, List<Button> buttons,
+                  List<Checkbox> checkboxes, List<ProgressBar> progressBars) {
         this.title = title;
         this.buttons = buttons;
         this.checkboxes = checkboxes;
@@ -19,7 +21,7 @@ public class Window implements Element {
 
     @Override
     public void paint() {
-        System.out.println("Rendering the windows titled '" + this.title + "'...");
+        System.out.println("Rendering the window titled '" + this.title + "'...");
 
         for (Button button : this.buttons) {
             button.paint();
