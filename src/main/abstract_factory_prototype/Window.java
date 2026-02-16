@@ -33,4 +33,20 @@ public class Window implements Element {
             progressBar.paint();
         }
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public List<Button> getButtons() {
+        return buttons;
+    }
+
+    public List<Checkbox> getCheckboxes() {
+        return checkboxes;
+    }
+
+    public List<ProgressBar> getProgressBars() {
+        return progressBars;
+    }
 }

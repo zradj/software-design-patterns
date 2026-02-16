@@ -8,7 +8,7 @@ import java.util.List;
 public class WindowBuilder {
 
     private final GUIFactory factory;
-    private String title;
+    private String title = "";
     private final List<Button> buttons = new ArrayList<>();
     private final List<Checkbox> checkboxes = new ArrayList<>();
     private final List<ProgressBar> progressBars = new ArrayList<>();
