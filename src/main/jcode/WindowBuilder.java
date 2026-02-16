@@ -1,6 +1,6 @@
-package main.abstract_factory_prototype;
+package main.jcode;
 
-import main.abstract_factory_prototype.Element.*;
+import main.jcode.Element.*;
 
 import java.util.ArrayList;
 import java.util.List;

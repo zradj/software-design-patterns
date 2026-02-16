@@ -1,10 +1,10 @@
-package test.abstract_factory_prototype;
+package test.jcode;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import main.abstract_factory_prototype.GUIFactory;
-import main.abstract_factory_prototype.Window;
-import main.abstract_factory_prototype.WindowBuilder;
+import main.jcode.GUIFactory;
+import main.jcode.Window;
+import main.jcode.WindowBuilder;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 

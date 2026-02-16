@@ -1,4 +1,4 @@
-package main.abstract_factory_prototype;
+package main.jcode;
 
 import java.io.FileInputStream;
 import java.io.IOException;

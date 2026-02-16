@@ -1,8 +1,8 @@
-package main.abstract_factory_prototype;
+package main.jcode;
 
-import static main.abstract_factory_prototype.Element.*;
+import static main.jcode.Element.*;
 
-import main.abstract_factory_prototype.Element.Button;
+import main.jcode.Element.Button;
 
 public interface GUIFactory {
 

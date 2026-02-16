@@ -1,9 +1,9 @@
-package test.abstract_factory_prototype;
+package test.jcode;
 
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
-import main.abstract_factory_prototype.Element;
-import main.abstract_factory_prototype.GUIFactory;
+import main.jcode.Element;
+import main.jcode.GUIFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
