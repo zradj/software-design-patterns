@@ -63,6 +63,7 @@ public class GUIApp {
 
     public static void main(String[] args) throws IOException {
         Application app = configureApplication();
+        app.prepareWindow("Cool window", 2, 3, 1);
         app.paint();
     }
 }

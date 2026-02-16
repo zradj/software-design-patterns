@@ -1,24 +1,34 @@
 package main.abstract_factory_prototype;
 
-import main.abstract_factory_prototype.Element.Button;
-import main.abstract_factory_prototype.Element.Checkbox;
-import main.abstract_factory_prototype.Element.ProgressBar;
-
 public class Application {
 
-    private Button button;
-    private Checkbox checkbox;
-    private ProgressBar progressBar;
+    private final WindowBuilder builder;
+    private Window window;
 
     public Application(GUIFactory factory) {
-        this.button = factory.createButton("Button");
-        this.checkbox = factory.createCheckbox("Checkbox");
-        this.progressBar = factory.createProgressBar(0);
+        this.builder = new WindowBuilder(factory);
+    }
+
+    public void prepareWindow(String title, int numButtons,
+                              int numCheckboxes, int numProgressBars) {
+        this.builder.addTitle(title);
+
+        for (int i = 1; i <= numButtons; i++) {
+            this.builder.addButton("Button " + i);
+        }
+
+        for (int i = 1; i <= numCheckboxes; i++) {
+            this.builder.addCheckbox("Checkbox " + i);
+        }
+
+        for (int i = 1; i <= numProgressBars; i++) {
+            this.builder.addProgressBar(0);
+        }
+
+        this.window = this.builder.build();
     }
 
     public void paint() {
-        button.paint();
-        checkbox.paint();
-        progressBar.paint();
+        this.window.paint();
     }
 }
