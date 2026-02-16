@@ -6,117 +6,117 @@ import abstract_factory_prototype.Element.Button;
 
 public interface GUIFactory {
 
-    Button createButton();
+    Button createButton(String text);
 
-    Checkbox createCheckbox();
+    Checkbox createCheckbox(String label);
 
-    ProgressBar createProgressBar();
+    ProgressBar createProgressBar(int value);
 
     class WinLightGUIFactory implements GUIFactory {
 
         @Override
-        public Button createButton() {
-            return new WinLightButton();
+        public Button createButton(String text) {
+            return new WinLightButton(text);
         }
 
         @Override
-        public Checkbox createCheckbox() {
-            return new WinLightCheckbox();
+        public Checkbox createCheckbox(String label) {
+            return new WinLightCheckbox(label);
         }
 
         @Override
-        public ProgressBar createProgressBar() {
-            return new WinLightProgressBar();
+        public ProgressBar createProgressBar(int value) {
+            return new WinLightProgressBar(value);
         }
     }
 
     class WinDarkGUIFactory implements GUIFactory {
 
         @Override
-        public Button createButton() {
-            return new WinDarkButton();
+        public Button createButton(String text) {
+            return new WinDarkButton(text);
         }
 
         @Override
-        public Checkbox createCheckbox() {
-            return new WinDarkCheckbox();
+        public Checkbox createCheckbox(String label) {
+            return new WinDarkCheckbox(label);
         }
 
         @Override
-        public ProgressBar createProgressBar() {
-            return new WinDarkProgressBar();
+        public ProgressBar createProgressBar(int value) {
+            return new WinDarkProgressBar(value);
         }
     }
 
     class MacLightGUIFactory implements GUIFactory {
 
         @Override
-        public Button createButton() {
-            return new MacLightButton();
+        public Button createButton(String text) {
+            return new MacLightButton(text);
         }
 
         @Override
-        public Checkbox createCheckbox() {
-            return new MacLightCheckbox();
+        public Checkbox createCheckbox(String label) {
+            return new MacLightCheckbox(label);
         }
 
         @Override
-        public ProgressBar createProgressBar() {
-            return new MacLightProgressBar();
+        public ProgressBar createProgressBar(int value) {
+            return new MacLightProgressBar(value);
         }
     }
 
     class MacDarkGUIFactory implements GUIFactory {
 
         @Override
-        public Button createButton() {
-            return new MacDarkButton();
+        public Button createButton(String text) {
+            return new MacDarkButton(text);
         }
 
         @Override
-        public Checkbox createCheckbox() {
-            return new MacDarkCheckbox();
+        public Checkbox createCheckbox(String label) {
+            return new MacDarkCheckbox(label);
         }
 
         @Override
-        public ProgressBar createProgressBar() {
-            return new MacDarkProgressBar();
+        public ProgressBar createProgressBar(int value) {
+            return new MacDarkProgressBar(value);
         }
     }
 
     class LinuxLightGUIFactory implements GUIFactory {
 
         @Override
-        public Button createButton() {
-            return new LinuxLightButton();
+        public Button createButton(String text) {
+            return new LinuxLightButton(text);
         }
 
         @Override
-        public Checkbox createCheckbox() {
-            return new LinuxLightCheckbox();
+        public Checkbox createCheckbox(String label) {
+            return new LinuxLightCheckbox(label);
         }
 
         @Override
-        public ProgressBar createProgressBar() {
-            return new LinuxLightProgressBar();
+        public ProgressBar createProgressBar(int value) {
+            return new LinuxLightProgressBar(value);
         }
     }
 
     class LinuxDarkGUIFactory implements GUIFactory {
 
         @Override
-        public Button createButton() {
-            return new LinuxDarkButton();
+        public Button createButton(String text) {
+            return new LinuxDarkButton(text);
         }
 
         @Override
-        public Checkbox createCheckbox() {
-            return new LinuxDarkCheckbox();
+        public Checkbox createCheckbox(String label) {
+            return new LinuxDarkCheckbox(label);
         }
 
         @Override
-        public ProgressBar createProgressBar() {
-            return new LinuxDarkProgressBar();
+        public ProgressBar createProgressBar(int value) {
+            return new LinuxDarkProgressBar(value);
         }
     }
 }

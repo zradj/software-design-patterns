@@ -11,9 +11,9 @@ public class Application {
     private ProgressBar progressBar;
 
     public Application(GUIFactory factory) {
-        this.button = factory.createButton();
-        this.checkbox = factory.createCheckbox();
-        this.progressBar = factory.createProgressBar();
+        this.button = factory.createButton("Button");
+        this.checkbox = factory.createCheckbox("Checkbox");
+        this.progressBar = factory.createProgressBar(0);
     }
 
     public void paint() {
