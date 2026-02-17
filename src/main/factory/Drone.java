@@ -2,8 +2,8 @@ package main.factory;
 
 public class Drone implements Transport {
 
-    @Override
-    public void deliver() {
-        System.out.println("Delivered by drone");
-    }
+  @Override
+  public void deliver() {
+    System.out.println("Delivered by drone");
+  }
 }

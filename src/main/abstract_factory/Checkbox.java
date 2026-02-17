@@ -1,4 +1,3 @@
 package main.abstract_factory;
 
-public interface Checkbox extends GUIElement {
-}
+public interface Checkbox extends GUIElement {}

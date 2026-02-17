@@ -2,284 +2,248 @@ package main.jcode;
 
 public interface Element {
 
-    void paint();
+  void paint();
 
-    abstract class Button implements Element {
+  abstract class Button implements Element {
 
-        protected String text;
+    protected String text;
 
-        public Button(String text) {
-            this.text = text;
-        }
+    public Button(String text) {
+      this.text = text;
+    }
+  }
+
+  abstract class Checkbox implements Element {
+
+    protected String label;
+
+    public Checkbox(String label) {
+      this.label = label;
+    }
+  }
+
+  abstract class ProgressBar implements Element {
+
+    protected int value;
+
+    public ProgressBar(int value) {
+      this.value = value;
+    }
+  }
+
+  class WinLightButton extends Button {
+
+    public WinLightButton(String text) {
+      super(text);
     }
 
-    abstract class Checkbox implements Element {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a light square Windows Button with text '" + this.text + "'.");
+    }
+  }
 
-        protected String label;
+  class WinLightCheckbox extends Checkbox {
 
-        public Checkbox(String label) {
-            this.label = label;
-        }
+    public WinLightCheckbox(String label) {
+      super(label);
     }
 
-    abstract class ProgressBar implements Element {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a light Windows Checkbox with label '" + this.label + "'.");
+    }
+  }
 
-        protected int value;
+  class WinLightProgressBar extends ProgressBar {
 
-        public ProgressBar(int value) {
-            this.value = value;
-        }
+    public WinLightProgressBar(int value) {
+      super(value);
     }
 
-    class WinLightButton extends Button {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a light Windows progress bar with value " + this.value + ".");
+    }
+  }
 
-        public WinLightButton(String text) {
-            super(text);
-        }
+  class WinDarkButton extends Button {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a light square Windows Button with text '" + this.text + "'."
-            );
-        }
+    public WinDarkButton(String text) {
+      super(text);
     }
 
-    class WinLightCheckbox extends Checkbox {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a dark square Windows Button with text '" + this.text + "'.");
+    }
+  }
 
-        public WinLightCheckbox(String label) {
-            super(label);
-        }
+  class WinDarkCheckbox extends Checkbox {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a light Windows Checkbox with label '" + this.label + "'."
-            );
-        }
+    public WinDarkCheckbox(String label) {
+      super(label);
     }
 
-    class WinLightProgressBar extends ProgressBar {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a dark Windows Checkbox with label '" + this.label + "'.");
+    }
+  }
 
-        public WinLightProgressBar(int value) {
-            super(value);
-        }
+  class WinDarkProgressBar extends ProgressBar {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a light Windows progress bar with value " + this.value + "."
-            );
-        }
+    public WinDarkProgressBar(int value) {
+      super(value);
     }
 
-    class WinDarkButton extends Button {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a dark Windows progress bar with value " + this.value + ".");
+    }
+  }
 
-        public WinDarkButton(String text) {
-            super(text);
-        }
+  class MacLightButton extends Button {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a dark square Windows Button with text '" + this.text + "'."
-            );
-        }
+    public MacLightButton(String text) {
+      super(text);
     }
 
-    class WinDarkCheckbox extends Checkbox {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a light round Mac Button with text '" + this.text + "'.");
+    }
+  }
 
-        public WinDarkCheckbox(String label) {
-            super(label);
-        }
+  class MacLightCheckbox extends Checkbox {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a dark Windows Checkbox with label '" + this.label + "'."
-            );
-        }
+    public MacLightCheckbox(String label) {
+      super(label);
     }
 
-    class WinDarkProgressBar extends ProgressBar {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a light Mac Checkbox with label '" + this.label + "'.");
+    }
+  }
 
-        public WinDarkProgressBar(int value) {
-            super(value);
-        }
+  class MacLightProgressBar extends ProgressBar {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a dark Windows progress bar with value " + this.value + "."
-            );
-        }
+    public MacLightProgressBar(int value) {
+      super(value);
     }
 
-    class MacLightButton extends Button {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a light Mac progress bar with value " + this.value + ".");
+    }
+  }
 
-        public MacLightButton(String text) {
-            super(text);
-        }
+  class MacDarkButton extends Button {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a light round Mac Button with text '" + this.text + "'."
-            );
-        }
+    public MacDarkButton(String text) {
+      super(text);
     }
 
-    class MacLightCheckbox extends Checkbox {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a dark round Mac Button with text '" + this.text + "'.");
+    }
+  }
 
-        public MacLightCheckbox(String label) {
-            super(label);
-        }
+  class MacDarkCheckbox extends Checkbox {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a light Mac Checkbox with label '" + this.label + "'."
-            );
-        }
+    public MacDarkCheckbox(String label) {
+      super(label);
     }
 
-    class MacLightProgressBar extends ProgressBar {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a dark Mac Checkbox with label '" + this.label + "'.");
+    }
+  }
 
-        public MacLightProgressBar(int value) {
-            super(value);
-        }
+  class MacDarkProgressBar extends ProgressBar {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a light Mac progress bar with value " + this.value + "."
-            );
-        }
+    public MacDarkProgressBar(int value) {
+      super(value);
     }
 
-    class MacDarkButton extends Button {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a dark Mac progress bar with value " + this.value + ".");
+    }
+  }
 
-        public MacDarkButton(String text) {
-            super(text);
-        }
+  class LinuxLightButton extends Button {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a dark round Mac Button with text '" + this.text + "'."
-            );
-        }
+    public LinuxLightButton(String text) {
+      super(text);
     }
 
-    class MacDarkCheckbox extends Checkbox {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a light Linux Button with text '" + this.text + "'.");
+    }
+  }
 
-        public MacDarkCheckbox(String label) {
-            super(label);
-        }
+  class LinuxLightCheckbox extends Checkbox {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a dark Mac Checkbox with label '" + this.label + "'."
-            );
-        }
+    public LinuxLightCheckbox(String label) {
+      super(label);
     }
 
-    class MacDarkProgressBar extends ProgressBar {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a light Linux Checkbox with label '" + this.label + "'.");
+    }
+  }
 
-        public MacDarkProgressBar(int value) {
-            super(value);
-        }
+  class LinuxLightProgressBar extends ProgressBar {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a dark Mac progress bar with value " + this.value + "."
-            );
-        }
+    public LinuxLightProgressBar(int value) {
+      super(value);
     }
 
-    class LinuxLightButton extends Button {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a light Linux progress bar with value " + this.value + ".");
+    }
+  }
 
-        public LinuxLightButton(String text) {
-            super(text);
-        }
+  class LinuxDarkButton extends Button {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a light Linux Button with text '" + this.text + "'."
-            );
-        }
+    public LinuxDarkButton(String text) {
+      super(text);
     }
 
-    class LinuxLightCheckbox extends Checkbox {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a dark Linux Button with text '" + this.text + "'.");
+    }
+  }
 
-        public LinuxLightCheckbox(String label) {
-            super(label);
-        }
+  class LinuxDarkCheckbox extends Checkbox {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a light Linux Checkbox with label '" + this.label + "'."
-            );
-        }
+    public LinuxDarkCheckbox(String label) {
+      super(label);
     }
 
-    class LinuxLightProgressBar extends ProgressBar {
+    @Override
+    public void paint() {
+      System.out.println("Rendering a dark Linux Checkbox with label '" + this.label + "'.");
+    }
+  }
 
-        public LinuxLightProgressBar(int value) {
-            super(value);
-        }
+  class LinuxDarkProgressBar extends ProgressBar {
 
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a light Linux progress bar with value " + this.value + "."
-            );
-        }
+    public LinuxDarkProgressBar(int value) {
+      super(value);
     }
 
-    class LinuxDarkButton extends Button {
-
-        public LinuxDarkButton(String text) {
-            super(text);
-        }
-
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a dark Linux Button with text '" + this.text + "'."
-            );
-        }
+    @Override
+    public void paint() {
+      System.out.println("Rendering a dark Linux progress bar with value " + this.value + ".");
     }
-
-    class LinuxDarkCheckbox extends Checkbox {
-
-        public LinuxDarkCheckbox(String label) {
-            super(label);
-        }
-
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a dark Linux Checkbox with label '" + this.label + "'."
-            );
-        }
-    }
-
-    class LinuxDarkProgressBar extends ProgressBar {
-
-        public LinuxDarkProgressBar(int value) {
-            super(value);
-        }
-
-        @Override
-        public void paint() {
-            System.out.println(
-                    "Rendering a dark Linux progress bar with value " + this.value + "."
-            );
-        }
-    }
+  }
 }
