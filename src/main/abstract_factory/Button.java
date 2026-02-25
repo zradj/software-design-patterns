@@ -1,4 +1,3 @@
 package main.abstract_factory;
 
-public interface Button extends GUIElement {
-}
+public interface Button extends GUIElement {}
