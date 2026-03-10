@@ -14,18 +14,18 @@ public class Pizza {
   }
 
   public void addCheese() {
-      this.cheese = true;
+    this.cheese = true;
   }
 
   public void addPepperoni() {
-      this.pepperoni = true;
+    this.pepperoni = true;
   }
 
   public boolean hasCheese() {
-      return this.cheese;
+    return this.cheese;
   }
 
   public boolean hasPepperoni() {
-      return this.pepperoni;
+    return this.pepperoni;
   }
 }
