@@ -1,5 +1,8 @@
 package main.proxy_decorator.proxy;
 
+import main.proxy_decorator.Document;
+import main.proxy_decorator.RealDocument;
+
 import java.util.Objects;
 
 public class DocumentProxy implements Document {

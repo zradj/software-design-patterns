@@ -1,9 +1,8 @@
 package main.jcode;
 
-import main.jcode.Element.*;
-
 import java.util.ArrayList;
 import java.util.List;
+import main.jcode.Element.*;
 
 public class WindowBuilder {
 

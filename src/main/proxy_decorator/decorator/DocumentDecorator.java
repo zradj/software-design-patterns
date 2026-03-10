@@ -1,6 +1,6 @@
 package main.proxy_decorator.decorator;
 
-import main.proxy_decorator.proxy.Document;
+import main.proxy_decorator.Document;
 
 public abstract class DocumentDecorator implements Document {
 

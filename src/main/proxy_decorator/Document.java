@@ -1,4 +1,4 @@
-package main.proxy_decorator.proxy;
+package main.proxy_decorator;
 
 public interface Document {
 

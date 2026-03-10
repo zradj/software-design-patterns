@@ -1,6 +1,6 @@
 package main.proxy_decorator.decorator;
 
-import main.proxy_decorator.proxy.Document;
+import main.proxy_decorator.Document;
 
 public class EncryptionDecorator extends DocumentDecorator implements Document {
 
